@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/vista_estadisticas.css">
+    <title>Estadísticas</title>
+    <script src="menuhamburguesa.js"></script>
+    
+</head>
+<body>
+    <nav class="nav__principal">
+        <div>
+            <img class="logo" src="/imagenes/logo.png" alt="logo">
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+        <div class="nav__principal-botones" id="nav-links">
+            <a href="#" class="nav__principal-link">Mis encuestas</a>
+            <a href="#" class="nav__principal-link">Estadísticas generales</a>
+            <a href="#" class="nav__principal-link">Mi perfil</a>
+            <button class="boton__1">Crear encuesta</button>
+        </div>
+    </nav>
+
+    <div class="contenedor__inicio">
+        <div class="contenedor__encuesta-header">
+            <h1 class="contenedor__inicio-titulo">Estadísticas Generales</h1>
+        </div>
+    </div>
+
+    <div class="contenedor__estadisticas">
+        <div class="card__estadisticas">
+            <img src="/iconos/encuesta.jpg" alt="" class="imagen__card">
+            <p class="estado__card">Total</p>
+            <h2 class="titulo__card">450 Encuestas</h2>
+            <p class="parrafo__card">Número total de encuestas creadas.</p>
+            <button class="boton__1">Generar PDF</button>
+        </div>
+
+        <div class="card__estadisticas">
+            <img src="/iconos/encuestas_activas.png" alt="" class="imagen__card">
+            <p class="estado__card">Activas</p>
+            <h2 class="titulo__card">40 Encuestas</h2>
+            <p class="parrafo__card">Encuestas actualmente activas.</p>
+            <button class="boton__1">Generar PDF</button>
+        </div>
+
+        <div class="card__estadisticas">
+            <img src="/iconos/pausar_encuesta.png" alt="" class="imagen__card">
+            <p class="estado__card">Inactivas</p>
+            <h2 class="titulo__card">200 Encuestas</h2>
+            <p class="parrafo__card">Encuestas actualmente inactivas.</p>
+            <button class="boton__1">Generar PDF</button>
+        </div>
+        
+    </div>
+
+</body>
+</html>
