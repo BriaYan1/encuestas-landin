@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +6,7 @@
     <link rel="stylesheet" href="/vista_estadisticas.css">
     <title>Estadísticas</title>
     <script src="menuhamburguesa.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
     <nav class="nav__principal">
@@ -38,7 +36,7 @@
             <p class="estado__card">Total</p>
             <h2 class="titulo__card">450 Encuestas</h2>
             <p class="parrafo__card">Número total de encuestas creadas.</p>
-            <button class="boton__1">Generar PDF</button>
+            <button class="boton__1" onclick="abrirModal()">Generar PDF</button>
         </div>
 
         <div class="card__estadisticas">
@@ -46,7 +44,7 @@
             <p class="estado__card">Activas</p>
             <h2 class="titulo__card">40 Encuestas</h2>
             <p class="parrafo__card">Encuestas actualmente activas.</p>
-            <button class="boton__1">Generar PDF</button>
+            <button class="boton__1" onclick="abrirModal()">Generar PDF</button>
         </div>
 
         <div class="card__estadisticas">
@@ -54,10 +52,50 @@
             <p class="estado__card">Inactivas</p>
             <h2 class="titulo__card">200 Encuestas</h2>
             <p class="parrafo__card">Encuestas actualmente inactivas.</p>
-            <button class="boton__1">Generar PDF</button>
+            <button class="boton__1" onclick="abrirModal()">Generar PDF</button>
         </div>
-        
     </div>
 
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Seleccionar Rango de Fechas</h2>
+            <label for="fechaInicio">Fecha de Inicio:</label>
+            <input type="date" id="fechaInicio">
+            <label for="fechaFin">Fecha de Fin:</label>
+            <input type="date" id="fechaFin">
+            <button class="boton__1" onclick="generarPDF()">Generar PDF</button>
+        </div>
+    </div>
+
+    <script>
+        function abrirModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function cerrarModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function generarPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            const fechaInicio = document.getElementById('fechaInicio').value;
+            const fechaFin = document.getElementById('fechaFin').value;
+
+            doc.text("Estadísticas Generales", 10, 10);
+            doc.text(`Rango de fechas: ${fechaInicio} a ${fechaFin}`, 10, 20);
+            doc.text("Total de encuestas: 450", 10, 30);
+            doc.text("Encuestas activas: 40", 10, 40);
+            doc.text("Encuestas inactivas: 200", 10, 50);
+
+            // Agregar más contenido según sea necesario
+
+            doc.save("estadisticas_generales.pdf");
+            cerrarModal();
+        }
+    </script>
 </body>
 </html>
