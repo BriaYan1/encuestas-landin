@@ -35,8 +35,8 @@
         <h3 class="titulo__perfil">Información del Perfil</h3>
         <p class="perfil__subtitulo">Administrar su información personal y la configuración de su cuenta</p>
         <div class="editar__perfil">
-            <button class="boton__1">Editar perfil</button>
-            <button class="boton__1">Cambiar Contraseña</button>
+            <button class="boton__1" onclick="abrirModalEditarPerfil()">Editar perfil</button>
+            <button class="boton__1" onclick="abrirModalCambiarContrasena()">Cambiar Contraseña</button>
         </div>
     </div>
 
@@ -91,6 +91,41 @@
         </div>
     </div>
 
+    <!--Modal para editar contraseña-->
+
+    <div id="modalCambiarContrasena" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModalCambiarContrasena()">&times;</span>
+            <h2>Cambiar Contraseña</h2>
+            <form id="formCambiarContrasena">
+                <label for="contrasenaActual">Contraseña Actual:</label>
+                <input type="password" id="contrasenaActual" name="contrasenaActual">
+                <label for="nuevaContrasena">Nueva Contraseña:</label>
+                <input type="password" id="nuevaContrasena" name="nuevaContrasena">
+                <label for="confirmarContrasena">Confirmar Nueva Contraseña:</label>
+                <input type="password" id="confirmarContrasena" name="confirmarContrasena">
+                <button type="submit" class="boton__1">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para editar perfil -->
+    <div id="modalEditarPerfil" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModalEditarPerfil()">&times;</span>
+            <h2>Editar Perfil</h2>
+            <form id="formEditarPerfil">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" value="Carlos Rodriguez">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" value="correo@correo.com">
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" value="0424 - 123 45 67">
+                <button type="submit" class="boton__1">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Modal -->
     <div id="modal" class="modal">
         <div class="modal-content">
@@ -105,6 +140,22 @@
     </div>
 
     <script>
+        function abrirModalEditarPerfil() {
+            document.getElementById('modalEditarPerfil').style.display = 'block';
+        }
+
+        function cerrarModalEditarPerfil() {
+            document.getElementById('modalEditarPerfil').style.display = 'none';
+        }
+
+        function abrirModalCambiarContrasena() {
+            document.getElementById('modalCambiarContrasena').style.display = 'block';
+        }
+
+        function cerrarModalCambiarContrasena() {
+            document.getElementById('modalCambiarContrasena').style.display = 'none';
+        }
+
         function abrirModal() {
             document.getElementById('modal').style.display = 'block';
         }
