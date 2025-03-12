@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/vista_encuesta_publicada.css">
+    <title>Encuesta sobre Inteligencia Artificial</title>
+    <script src="menuhamburguesa.js"></script>
+</head>
+<body>
+    <nav class="nav__principal">
+        <div>
+            <img class="logo" src="/imagenes/logo.png" alt="logo">
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+        <div class="nav__principal-botones" id="nav-links">
+            <a href="#" class="nav__principal-link">Mis encuestas</a>
+            <a href="#" class="nav__principal-link">Estadísticas generales</a>
+            <a href="#" class="nav__principal-link">Mi perfil</a>
+            <button class="boton__1">Crear encuesta</button>
+        </div>
+    </nav>
+
+    <div class="contenedor__inicio">
+        <div class="contenedor__encuesta-header">
+            <h1 class="contenedor__inicio-titulo">Encuesta sobre Inteligencia Artificial</h1>
+            <p class="descripcion__encuesta">Queremos conocer tu opinión sobre la inteligencia artificial y su impacto en la sociedad.</p>
+        </div>
+    </div>
+
+    <div class="contenedor__preguntas">
+        <form method="POST" class="formulario">
+            <div class="pregunta">
+                <h3>1. ¿Qué tan familiarizado estás con la inteligencia artificial?</h3>
+                <select name="familiaridad" class="selector__pregunta">
+                    <option value="muy_familiarizado">Muy familiarizado</option>
+                    <option value="familiarizado">Familiarizado</option>
+                    <option value="poco_familiarizado">Poco familiarizado</option>
+                    <option value="nada_familiarizado">Nada familiarizado</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <h3>2. ¿Crees que la inteligencia artificial tendrá un impacto positivo o negativo en la sociedad?</h3>
+                <select name="impacto" class="selector__pregunta">
+                    <option value="positivo">Positivo</option>
+                    <option value="negativo">Negativo</option>
+                    <option value="neutral">Neutral</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <h3>3. ¿En qué áreas crees que la inteligencia artificial será más beneficiosa?</h3>
+                <textarea name="areas_beneficiosas" class="texto__pregunta" placeholder="Escribe tu respuesta aquí..."></textarea>
+            </div>
+
+            <div class="pregunta">
+                <h3>4. ¿Te preocupa que la inteligencia artificial pueda reemplazar trabajos humanos?</h3>
+                <select name="preocupacion" class="selector__pregunta">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                    <option value="no_se">No estoy seguro</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <h3>5. ¿Qué medidas crees que se deben tomar para regular el uso de la inteligencia artificial?</h3>
+                <textarea name="medidas_regulacion" class="texto__pregunta" placeholder="Escribe tu respuesta aquí..."></textarea>
+            </div>
+
+            <div class="pregunta">
+                <h3>6. ¿Has utilizado alguna aplicación o servicio que utilice inteligencia artificial?</h3>
+                <select name="uso_ia" class="selector__pregunta">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <h3>7. ¿Qué tan seguro te sientes con la privacidad de tus datos al usar servicios de inteligencia artificial?</h3>
+                <select name="privacidad" class="selector__pregunta">
+                    <option value="muy_seguro">Muy seguro</option>
+                    <option value="seguro">Seguro</option>
+                    <option value="poco_seguro">Poco seguro</option>
+                    <option value="nada_seguro">Nada seguro</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <h3>8. ¿Qué opinas sobre el uso de inteligencia artificial en la toma de decisiones importantes (por ejemplo, en la medicina o la justicia)?</h3>
+                <textarea name="opinion_decisiones" class="texto__pregunta" placeholder="Escribe tu respuesta aquí..."></textarea>
+            </div>
+
+            <div class="pregunta">
+                <h3>9. ¿Crees que la inteligencia artificial debería tener límites éticos?</h3>
+                <select name="limites_eticos" class="selector__pregunta">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                    <option value="no_se">No estoy seguro</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <h3>10. ¿Qué esperas del futuro de la inteligencia artificial?</h3>
+                <textarea name="futuro_ia" class="texto__pregunta" placeholder="Escribe tu respuesta aquí..."></textarea>
+            </div>
+
+            <button type="submit" class="boton__finalizar">Enviar respuestas</button>
+        </form>
+    </div>
+</body>
+</html>

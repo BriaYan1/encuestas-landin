@@ -89,7 +89,7 @@ body{
     max-width: 70rem;
     margin: 2rem auto;
     padding: 0 1rem;
-    margin-top: 10rem; /* Margen superior para evitar solapamiento */
+    margin-top: 10rem; 
 }
 
 .contenedor__encuesta-header {
@@ -100,103 +100,66 @@ body{
     font-size: 2.5rem;
     color: var(--azul--primario);
     margin-bottom: 2rem;
-}
-
-.contenedor__estadisticas {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 20px;
-    max-width: 1080px;
-    margin: 0 auto;
-}
-
-.card__estadisticas {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    width: 250px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.imagen__card {
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.estado__card {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-.titulo__card {
-    font-size: 24px;
-    margin: 10px 0;
-    color: #333;
-}
-
-.parrafo__card {
-    font-size: 14px;
-    margin-bottom: 10px;
+.descripcion__encuesta {
+    font-size: 16px;
     color: #666;
-}
-
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 5px;
+    margin-top: 10px;
     text-align: center;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+.contenedor__preguntas {
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1080px;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.formulario {
+    display: flex;
+    flex-direction: column;
 }
 
-label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-input[type="date"] {
-    padding: 10px;
-    width: calc(100% - 22px);
+.pregunta {
     margin-bottom: 20px;
+}
+
+.pregunta h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.selector__pregunta, .texto__pregunta {
+    width: 100%;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
 }
 
+.texto__pregunta {
+    height: 100px;
+    resize: none;
+}
+
+.boton__finalizar {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.boton__finalizar:hover {
+    background-color: #0056b3;
+}
 
 @media (width < 769px) {
 
@@ -231,7 +194,5 @@ input[type="date"] {
 
     .contenedor__inicio-titulo {
         font-size: 3rem;
-        padding: 1rem 1rem;
     }
-
 }
